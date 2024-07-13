@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  backend:
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ./backend:/app/medusa
+    ports:
+      - "9000:9000"
+
+  storefront:
+    volumes:
+      - ./storefront:/app/storefront
+    ports:
+      - "8000:8000"
